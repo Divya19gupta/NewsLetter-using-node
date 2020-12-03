@@ -4,8 +4,6 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 
-//073237b96a
-//1b4a44859b82d490929fadda6c180744-us7
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 //we are accessing static folders and if we want those changes to update
@@ -34,10 +32,10 @@ app.get("/",function(req,res){
         var jsonData = JSON.stringify(data);
          
         //here we want to post data and not extract
-        const url ="https://us7.api.mailchimp.com/3.0//lists/073237b96a";
+        const url ="https://usx.api.mailchimp.com/3.0//lists/APIkey";
         const options={
             method:"POST",
-            auth:"divya:1b4a44859b82d490929fadda6c180744-us7"
+            auth:"divya:key"
         }
         const request = https.request(url,options,function(response){
 
